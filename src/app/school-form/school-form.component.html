@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-lg-8">
+    <form class="form-group">
+      <label for="fname">First Name</label>
+      <input class="form-control" type="text" id="fname" name = "fname" [(ngModel)] = "fname" ng-pattern ="/^[a-zA-Z\s]*$/">
+      <label for="lname">Last Name</label>
+      <input class="form-control" type="text" id="lname" name = "lname" [(ngModel)] = "lname" ng-pattern ="/^[a-zA-Z\s]*$/">
+      <label for="class">Class</label>
+      <input type="number" class="form-control" id="class" name = "class" [(ngModel)] = "clas" >
+      <label for="percentage">Percentage</label>
+      <input type="number" class="form-control" id="percentage" name="percentage" [(ngModel)] = "percentage" >
+      <label for="yop">Year of Passing</label>
+      <input type="number" class="form-control" id="yop" name="yop" [(ngModel)] = "yop">
+    <button type="button" class="btn btn-info"
+    [disabled] = "fname ==='' || lname ==='' || yop > 2017 || clas === '' || fname.length > 20 ||
+     lname.length > 20 || clas.length < 1 || percentage.length < 1 || yop ==='' " (click) = "perform()"
+    >Submit
+  </button>
+  </form>
+  </div>
+</div>

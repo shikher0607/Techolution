@@ -1,0 +1,18 @@
+<table>
+    <thead>
+    <tr>
+      <th>Student Results Board</th>
+    </tr></thead>
+    <thead id="subheadings">
+    <tr>
+      <td>Student Name</td>
+      <td>Roll Number</td>
+      <td>Status</td>
+    </tr>
+    <tr *ngFor = "let rec of data">
+      <td> {{rec.name | json}} </td>
+      <td> {{rec.rollNumber | json}} </td>
+      <td> {{rec.marks.Maths < 20 || rec.marks.English < 20 || rec.marks.Science < 20 ? 'fail' : 'pass' | json}} </td>
+    </tr>
+    </thead>
+</table>
